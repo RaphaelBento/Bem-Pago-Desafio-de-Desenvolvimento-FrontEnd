@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header></Header>
+    <CardLogin></CardLogin>
 
 
   </div>
@@ -9,11 +9,11 @@
 
 <script>
 
-import Header from './components/Header.vue'
+import CardLogin from './components/CardLogin.vue'
 
 export default {
   components: {
-    Header
+    CardLogin
   }
   
 }
