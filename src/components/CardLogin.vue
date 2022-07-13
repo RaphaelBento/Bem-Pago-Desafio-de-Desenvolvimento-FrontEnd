@@ -3,47 +3,48 @@
   <div>
  <div id="CardInteiro" >
   <div id="Cabecario">
-    <img src="https://img.icons8.com/pastel-glyph/64/000000/cardboard-box.png" alt="">
-        <p id="TxtHeader">Formulário para compra de</p>
+       <img src="../assets/CaixaBox.png" alt="Imagem CardBoardBox"/>
+       <p id="TxtHeader">Formulário para compra de</p>
   </div>
   <div id="CorpoCard">
-    <span >
-    <h3>Quais adesivos:</h3>
-    <!-- <span style="display: flex;">
-    <input type="button">
-    <input type="button">
-    <input type="button">
-    </span> -->
-    <div>
-     <input type="checkbox" aria-label="Checkbox for following text input"/>
-    <input type="checkbox" aria-label="Checkbox for following text input"/>
-    <input type="checkbox" aria-label="Checkbox for following text input"/>
+   
+    <h5>Quais adesivos:</h5>
+    
+    <div class="form-check">
+    <input type="checkbox" class="form-check-input" />
+     <label class="form-check-label" for="exampleRadios1">
+    React
+  </label>
+    </div>
+    <div class="form-check">
+    <input type="checkbox" class="form-check-input"/>
+    <label class="form-check-label" for="exampleRadios1">
+    Vue
+   </label>
+</div>
+    <div class="form-check">
+    <input type="checkbox" class="form-check-input"/>
+    <label class="form-check-label" for="exampleRadios1">
+    Angular
+    </label>
     </div>
     
-    </span>
-    <div class="input-group mb-3">
-  <div class="input-group-prepend">
-    <div class="input-group-text">
-      <input type="checkbox" aria-label="Checkbox for following text input">
-    </div>
-  </div>
-  <input type="text" class="form-control" aria-label="Text input with checkbox">
-</div>
     <span id="QtdAdsivos">
-        <h3>Quantos adesivos de cada ?</h3>
-        <button v-on:click="Contador += 1">+</button>
-        <input type="text" v-model="Contador"/>
-        <button v-on:click="Contador -= 1">-</button>
+        <h5>Quantos adesivos de cada ?</h5>
+        <button v-on:click="Contador += 1" style="background-color: #2f3675;">+</button>
+        <input type="text" v-model="Contador" id="DisplayContador"/>
+        <button v-on:click="Contador -= 1" style="background-color:#2f3675;">-</button>
          <p>Quantas vezes o botão acima foi clicado: {{ Contador }}</p>
     </span>
-    <span class="EntradaDeTexto">
-        <textarea class="EntradaDeTexto">
+    <div class="" id="EntradaTxt">
+        <h5 id="TitleObser">Observações:</h5>
+      <textarea  class="form-control" id="AreaTxt">
             Alguma dúvida? Recado?
         </textarea>
-    </span>
+    </div>
   </div>
-  <div id="RodaPe">
-    <button type="button" class="btn btn-primary" style="background-color:#000080 ;">Enviar</button>
+  <div id="RodapeBtn">
+    <button type="button" class="btn btn-primary" id="BtnEnviar">Enviar</button>
   </div>
   </div>
  </div>
@@ -63,7 +64,7 @@ export default {
 <style>
 #Cabecario{
 width: 100%;
-    background-color: #000080;
+    background-color: #2e3675;
     border-radius: 5px;
     
  
@@ -75,10 +76,44 @@ width: 100%;
     color: white;
 }
 #CardInteiro{
-    background-color: whitesmoke;
-    width: 39%;
+    background-color:#f2f2f2;
+    width: 29%;
     border-radius: 5px;
-    height: 500px;
+    height: 750px;
     margin-left: 30%;
+}
+#DisplayContador{
+    background-color: #F5F5F5;
+}
+#AreaTxt{
+    background-color: #dde3e9;  
+    width: 86%;
+   
+    height: 178px;
+}
+#BtnEnviar{
+    
+    background-color: #000080;
+    position: relative;
+    left: 60%;
+    width: 31%;
+    margin-top: 12px;
+}
+#RodapeBtn{
+    
+    /* width: 100%;
+    
+    border-radius: 10px;
+    height: 80px;
+    margin-top: 33%; */
+    background-color: #dde3e9;
+    margin-top: 116px;
+    height: 8%;
+    border-radius: 5px;
+}
+#EntradaTxt{
+    position: relative;
+    left: 7%;
+    margin-bottom: 11%;
 }
 </style>
